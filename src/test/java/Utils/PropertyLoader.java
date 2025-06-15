@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.util.Properties;
 
     public class PropertyLoader {
-        private Properties properties;
+        private static Properties properties;
 
         public PropertyLoader(File filePath) {
             properties = new Properties();
@@ -17,7 +17,7 @@ import java.util.Properties;
             }
         }
 
-        public String getProperty(String key) {
+        public static String getProperty(String key) {
             return properties.getProperty(key);
         }
     }

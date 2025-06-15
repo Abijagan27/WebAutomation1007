@@ -29,13 +29,15 @@ public class BaseClass {
         options.addArguments("--disable-extensions");
 
         // Setup ChromeDriver
-        WebDriverManager.chromedriver().driverVersion("136.0.7103.93").setup(); // Or specify version if needed
+        WebDriverManager.chromedriver().driverVersion("137.0.7151.104").setup(); // Or specify version if needed
         driver.set(new ChromeDriver(options));
 
         // Timeouts and navigation
         getDriver().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));
         getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
         getDriver().get("https://testautomationpractice.blogspot.com/");
+//        getDriver().get(PropertyLoader.getProperty("dev.url"));
+        ExtentReportManager.logInfo("Browser launched successfully");
     }
 
     @AfterMethod
