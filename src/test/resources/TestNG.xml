@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Sample Test Suite" parallel="tests">
+
+    <!-- Define a test within the suite -->
+    <test name="Sample Test">
+        <parameter name="username" value="126358855"/>
+        <parameter name="password" value="126358855"/>
+        <groups>
+            <run>
+                <include name="regression"/>
+            </run>
+
+        </groups>
+        <classes>
+            <!-- Specify your test class here -->
+
+            <class name="packagename.testname">
+
+            </class>
+        </classes>
+    </test>
+
+</suite>
